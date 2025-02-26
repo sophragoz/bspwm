@@ -1,0 +1,84 @@
+configuration {
+  modes: "drun";
+  font: "JetBrainsMono Regular 10";
+}
+
+* {
+  bg: #282828;
+  fg: #ebdbb2;
+}
+
+window {
+  background-color: @bg;
+  width: 400;
+  border: 2px solid;
+  border-color: @bg;
+}
+
+mainbox {
+  background-color: @bg;
+  padding: 4px;
+  margin: 2px;
+}
+
+inputbar {
+  background-color: @fg;
+  border: 2px solid;
+  border-color: @fg;
+}
+
+prompt {
+  enabled: false;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "::";
+    background-color: @fg;
+    text-color: @bg;
+}
+
+entry {
+  background-color: @fg;
+  text-color: @bg;
+  cursor: text;
+  placeholder: "Search...";
+  placeholder-color: @bg;
+}
+
+listview {
+  columns: 1;
+  lines: 15;
+  dynamic: true;
+  scrollbar: false;
+  fixed-height: true;
+  fixed-columns: true;
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element {
+  background-color: @bg;
+  text-color: @fg;
+  padding: 3px;
+}
+
+element normal.normal,
+element alternate.normal,
+message,
+error-message {
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element selected.normal {
+  background-color: @fg;
+  text-color: @bg;
+}
+
+error-message,
+textbox {
+  padding: 3px;
+  background-color: @bg;
+  text-color: @fg;
+}

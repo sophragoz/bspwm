@@ -1,0 +1,37 @@
+alt + space
+  rofi -show drun
+
+super + e
+  pkill -USR1 -x sxhkd
+
+super + shift + {q,r}
+  bspc {quit,wm -r}
+
+super + ctrl + r
+  /usr/sbin/reboot
+
+super + ctrl + p
+  /usr/sbin/poweroff
+
+super + alt + c
+  scrot '%Y-%m-%d=%h-%M-screenshot.png' -e 'mv $f ~/Documents/screens/'
+
+alt + {_,shift + }Tab
+  bspc node -f {next,prev}.LOCAL
+
+super + {t,shift + t,s,f}
+  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+  bspc node -g {marked,locked,sticky,private}
+
+super + alt + {Left,Down,Up,Right}
+  bspc node -p {west,south,north,east}
+
+super + alt + space
+  bspc node -p cancel
+
+super + {_,shift + }{1-6}
+  bspc {desktop -f,node -d} '^{1-6}'
+
+super + {_,shift + }c
+  bspc node -{c}
+
