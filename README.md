@@ -1,2 +1,2 @@
-# bspwm
-My dots
+# My desktop in bspwm
+
