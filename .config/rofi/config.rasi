@@ -17,7 +17,7 @@ window {
 
 mainbox {
   background-color: @bg;
-  padding: 4px;
+  padding: 6px;
   margin: 2px;
 }
 
@@ -25,6 +25,7 @@ inputbar {
   background-color: @fg;
   border: 2px solid;
   border-color: @fg;
+  padding: 4px;
 }
 
 prompt {
@@ -60,7 +61,7 @@ listview {
 element {
   background-color: @bg;
   text-color: @fg;
-  padding: 3px;
+  padding: 4px;
 }
 
 element normal.normal,
