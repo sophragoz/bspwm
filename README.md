@@ -7,6 +7,16 @@ Features:
  - Minimal customized programs(kitty,nvim,polybar,wm)
  - For Sonic The Hedgehog's fans
 
+Themes for:
+ - Telegram: [click](https://github.com/indev29/telegram-gruvbox)
+ - Icons: [click](https://github.com/SylEleuth/gruvbox-plus-icon-pack)
+ - gtk: [click](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
+ - kvantum(aka qt5/6): [click](https://github.com/sachnr/gruvbox-kvantum-themes)
+ - cursor: [click](https://store.kde.org/p/1818760)
+ - Obsidian: [click](https://github.com/insanum/obsidian_gruvbox)
+ - code OSS(vscode): [click](https://github.com/jdinhify/vscode-theme-gruvbox)
+ - Steam: [click](https://flathub.org/apps/io.github.Foldex.AdwSteamGtk)
+
 Programs:
  ```bash
  #* Add Keys for repo
