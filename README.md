@@ -6,7 +6,6 @@ Features:
  - Minimalism
  - Minimal customized programs(kitty,nvim,polybar,wm)
  - BORDERS! MORE BORDERS!
- - 
 
 Themes for:
  - Telegram: [click](https://github.com/indev29/telegram-gruvbox)
