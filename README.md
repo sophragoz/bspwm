@@ -76,7 +76,7 @@ unzip NerdFontsSymbolsOnly.zip
 # * For your convenience, the names of the directories within the topics will be shortened
 cp -r Gruvbox-Plus-Dark ~/.icons/icon
 cp -r Capitaine\ Cursors\ \(Gruvbox\)\ -\ White/ ~/.icons/cursor
-rm -r fonts/ttf/JetBrainsMonoNL-*
+rm -r fonts/ttf/JetBrainsMonoNL-* #OPTIONAL! because you might need it
 cp -r fonts/ttf/* ~/.fonts/
 cp -r SymbolsNerdFont-Regular.ttf ~/.fonts/
 
