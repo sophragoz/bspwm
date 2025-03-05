@@ -2,12 +2,12 @@
 
 ![screen](screen.png)
 
-Features:
+### Features:
  - Minimalism
  - Minimal customized programs(kitty,nvim,polybar,wm)
  - BORDERS! MORE BORDERS!
 
-Themes for:
+### Themes for:
  - Telegram: [click](https://github.com/indev29/telegram-gruvbox)
  - Icons: [click](https://github.com/SylEleuth/gruvbox-plus-icon-pack)
  - gtk: [click](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
@@ -17,7 +17,7 @@ Themes for:
  - code OSS(vscode): [click](https://github.com/jdinhify/vscode-theme-gruvbox)
  - Steam: [click](https://flathub.org/apps/io.github.Foldex.AdwSteamGtk)
 
-Programs:
+### Programs:
  ```bash
  # * Add repositories(non-free/multilib)
  sudo xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
@@ -34,10 +34,10 @@ Programs:
  sudo ln -s /etc/sv/polkitd /var/service/
  ```
 
-To-Do:
+### To-Do:
  - Create bash script for installation dots.
 
-Installation:
+### Installation:
 ```bash
 # * Create folders for installing themes,icons,configs
 mkdir ~/.config
@@ -100,5 +100,12 @@ rm -rf ~/tmp-folder
 
 # * Done! Have a nice day!
 ```
+
+### Authors:
+> gtk theme: [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
+
+> Icons theme: [SylEleuth](https://github.com/SylEleuth)
+
+> Cursor theme: [sainnhe](https://github.com/sainnhe)
 
 # WARNING: this is dots is updating, they can become different and not look like in unixporn.
