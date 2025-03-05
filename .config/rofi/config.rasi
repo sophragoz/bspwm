@@ -13,6 +13,7 @@ window {
   width: 400;
   border: 2px solid;
   border-color: @bg;
+  border-radius: 12px;
 }
 
 mainbox {
@@ -26,6 +27,7 @@ inputbar {
   border: 2px solid;
   border-color: @fg;
   padding: 4px;
+  border-radius: 5px;
 }
 
 prompt {
@@ -75,6 +77,7 @@ error-message {
 element selected.normal {
   background-color: @fg;
   text-color: @bg;
+  border-radius: 5px;
 }
 
 error-message,

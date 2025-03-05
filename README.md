@@ -1,4 +1,4 @@
-# This is bspwm 
+# This is bspwm
 
 ![screen](screenshot.png)
 
@@ -19,18 +19,19 @@ Themes for:
 
 Programs:
  ```bash
- #* Add Keys for repo
- sudo rpm --import https://rpm.librewolf.net/pubkey.gpg
- 
- #* Add repositories(vscode/prismlauncher)
- sudo zypper addrepo https://download.opensuse.org/repositories/home:getchoo/openSUSE_Tumbleweed/home:getchoo.repo
- sudo zypper ar -cf https://download.opensuse.org/repositories/devel:/tools:/ide:/vscode/openSUSE_Tumbleweed devel_tools_ide_vscode
- sudo zypper ar -ef https://rpm.librewolf.net librewolf
- sudo zypper ref
+ #* Add repositories(non-free/multilib)
+ sudo xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
+ echo 'repository=https://github.com/index-0/librewolf-void/releases/latest/download/' > /etc/xbps.d/20-librewolf.conf
+ sudo xbps-install -Syyu
 
  #* install programs
- sudo zypper in bspwm nitrogen rofi polybar lxappearance htop neovim git prismlauncher steam telegram-desktop transmission-gtk java-21-openjdk krita vlc code nvidia-drivers-G06 docker librewolf eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk-4_1-0
+ sudo xbps-install bspwm rofi polybar nitrogen lxappearance htop neovim git PrismLauncher steam telegram-desktop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms librewolf eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd
+
+ #* Enable services
+ sudo ln -s /etc/sv/dhcpcd /var/service/
+ sudo ln -s /etc/sv/chrony /var/service/
+ sudo ln -s /etc/sv/alsa /var/service/
+ sudo ln -s /etc/sv/polkitd /var/service/
  ```
 
----
-![ad](ad.png)
+# WARNING: this is dots is updating, they can become different and not look like in unixporn.
