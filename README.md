@@ -34,4 +34,7 @@ Programs:
  sudo ln -s /etc/sv/polkitd /var/service/
  ```
 
+To-Do:
+ - Create bash script for installation dots.
+
 # WARNING: this is dots is updating, they can become different and not look like in unixporn.
