@@ -1,6 +1,6 @@
 # This is bspwm
 
-![screen](screenshot.png)
+![screen](screen.png)
 
 Features:
  - Minimalism
