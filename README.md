@@ -96,6 +96,8 @@ tar -xfv Gruvbox-Dark-blue.tar.gz
 clear
 rm -rf ~/tmp-folder
 
+# ! Themes won't install themselves, so go to lxappearance and select theme/icons/cursor, as well as font
+
 # * Done! Have a nice day!
 ```
 
