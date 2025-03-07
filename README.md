@@ -36,6 +36,7 @@
 
 ### To-Do:
  - Create bash script for installation dots.
+ - migrate bar from polybar to eww
 
 ### Installation:
 ```bash
