@@ -13,7 +13,6 @@ window {
   width: 400;
   border: 2px solid;
   border-color: @bg;
-  border-radius: 12px;
 }
 
 mainbox {
@@ -50,8 +49,8 @@ entry {
 }
 
 listview {
-  columns: 1;
-  lines: 15;
+  columns: 2;
+  lines: 16;
   dynamic: true;
   scrollbar: false;
   fixed-height: true;
