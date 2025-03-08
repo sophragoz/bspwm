@@ -25,7 +25,7 @@
  sudo xbps-install -Syyu
 
  # * install programs
- sudo xbps-install bspwm rofi polybar nitrogen lxappearance htop neovim git PrismLauncher steam telegram-desktop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms librewolf eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip
+ sudo xbps-install bspwm rofi polybar nitrogen lxappearance htop neovim git PrismLauncher steam telegram-desktop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms librewolf eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip psmisc lutris
 
  # * Enable services
  sudo ln -s /etc/sv/dhcpcd /var/service/
