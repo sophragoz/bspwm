@@ -2,9 +2,9 @@
 
 sxhkd &
 nitrogen --restore &
-polybar -c /home/sophragoz/.config/polybar/config.ini &
+polybar -c ~/.config/polybar/config.ini &
 xsetroot -cursor_name left_ptr &
-picom --config /home/sophragoz/.config/picom/picom.conf &
+picom --config ~/.config/picom/picom.conf &
 /usr/libexec/xdg-desktop-portal-gtk &
 
 #bspc rule -a
