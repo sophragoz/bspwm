@@ -21,17 +21,10 @@
  ```bash
  # * Add repositories(non-free/multilib)
  sudo xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
- echo 'repository=https://github.com/index-0/librewolf-void/releases/latest/download/' > /etc/xbps.d/20-librewolf.conf
  sudo xbps-install -Syyu
 
  # * install programs
- sudo xbps-install bspwm rofi polybar nitrogen lxappearance htop neovim git PrismLauncher steam telegram-desktop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms librewolf eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip psmisc lutris
-
- # * Enable services
- sudo ln -s /etc/sv/dhcpcd /var/service/
- sudo ln -s /etc/sv/chrony /var/service/
- sudo ln -s /etc/sv/alsa /var/service/
- sudo ln -s /etc/sv/polkitd /var/service/
+ sudo xbps-install bspwm rofi polybar nitrogen lxappearance htop neovim git PrismLauncher steam telegram-desktop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms filezilla eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip psmisc lutris 
  ```
 
 ### To-Do:
