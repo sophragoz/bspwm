@@ -7,8 +7,6 @@ xsetroot -cursor_name left_ptr &
 picom --config ~/.config/picom/picom.conf &
 /usr/libexec/xdg-desktop-portal-gtk &
 
-#bspc rule -a
-
 bspc monitor -d 1 2 3 4 5 6
 
 bspc config normal_border_color "#504945"
