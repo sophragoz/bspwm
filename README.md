@@ -51,7 +51,8 @@ git clone https://github.com/sophragoz/bspwm
 cd bspwm
 
 # * Copy .config and .xinitrc folder in ~/ directory
-cp -r .xinitrc .config ~/.config/
+cp -r .config ~/
+cp -r .xinitrc ~/
 
 # * Make executable bspwmrc, .xinitrc and sxhkdrc for starting wm
 chmod +x ~/.config/bspwm/bspwmrc
