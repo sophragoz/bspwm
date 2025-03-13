@@ -16,6 +16,7 @@
  - Obsidian: [click](https://github.com/insanum/obsidian_gruvbox)
  - code OSS(vscode): [click](https://github.com/jdinhify/vscode-theme-gruvbox)
  - Steam: [click](https://flathub.org/apps/io.github.Foldex.AdwSteamGtk)
+ - Chromium: [click](https://chromewebstore.google.com/detail/gruvbox-material-dark/fjofdcgahcnlkdjapcbeonbnmjdnfcki)
 
 ### Programs:
  ```bash
@@ -24,7 +25,7 @@
  sudo xbps-install -Syyu
 
  # * install programs
- sudo xbps-install bspwm rofi polybar nitrogen lxappearance htop neovim git PrismLauncher steam telegram-desktop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms filezilla eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip psmisc lutris 
+ sudo xbps-install bspwm rofi polybar nitrogen lxappearance htop neovim git PrismLauncher steam telegram-desktop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms filezilla eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip psmisc lutris xclip scrot
  ```
 ### if you like my dots and want to contribute then make a pull request
 ### To-Do:
@@ -80,7 +81,7 @@ cp -r Gruvbox-Plus-Dark ~/.icons/icon
 cp -r Capitaine\ Cursors\ \(Gruvbox\)\ -\ White/ ~/.icons/cursor
 rm -r fonts/ttf/JetBrainsMonoNL-* #OPTIONAL! because you might need it
 cp -r fonts/ttf/* ~/.fonts/
-cp -r SymbolsNerdFont-Regular.ttf ~/.fonts/
+cp -r SymbolsNerdFontMono-Regular.ttf ~/.fonts/
 
 # * Install defualt gruvbox gtk theme(using bash script)
 cd Gruvbox-GTK-Theme/themes
