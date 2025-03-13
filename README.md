@@ -26,7 +26,7 @@
  # * install programs
  sudo xbps-install bspwm rofi polybar nitrogen lxappearance htop neovim git PrismLauncher steam telegram-desktop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms filezilla eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip psmisc lutris 
  ```
-### if you like my dotas and want to contribute then make a pull request
+### if you like my dots and want to contribute then make a pull request
 ### To-Do:
  - Create bash script for installation dots.
  - migrate bar from polybar to eww
