@@ -101,6 +101,7 @@ rm -rf ~/tmp-folder
 
 # * Done! Have a nice day!
 ```
+and our bash-script installer. (u can don't clone this repo, u can clone our script and he automatically clone repo). But it only testing, it can be get errors, like fonts. We reccomend use 2 variant in our installation. Support arch-based and opensuse distros
 
 ### Authors:
 > gtk theme: [Fausto Korpsvart](https://github.com/Fausto-Korpsvart)
