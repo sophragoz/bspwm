@@ -32,7 +32,7 @@
  - Create bash script for installation dots.
  - migrate bar from polybar to eww
  - make notification demon (aka dunst)
- - make logout menu (then migrate to eww)
+ - ~~make logout menu (then migrate to eww)~~ migration to eww remains, as well as fixing the blue line
  - Widget in workspace (conky)
  - Rules for apps 
  - Grub theme
