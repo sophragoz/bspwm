@@ -32,7 +32,7 @@
  - Create bash script for installation dots.
  - migrate bar from polybar to eww
  - make notification demon (aka dunst)
- - ~~make logout menu (then migrate to eww)~~ migration to eww remains, as well as fixing the blue line
+ - ~~make logout menu (then migrate to eww)~~ migration to eww remains
  - Widget in workspace (conky)
  - Rules for apps 
  - Grub theme
@@ -54,6 +54,12 @@ cd bspwm
 # * Copy .config and .xinitrc folder in ~/ directory
 cp -r .config ~/
 cp -r .xinitrc ~/
+
+# * Install plug-vim, and Install plugin theme
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# :PlugInstall
+# :wq
 
 # * Make executable bspwmrc, .xinitrc and sxhkdrc for starting wm
 chmod +x ~/.config/bspwm/bspwmrc
