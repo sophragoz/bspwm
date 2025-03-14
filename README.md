@@ -39,6 +39,7 @@
  - Grub theme
  - Display manager
  - Plymouth
+ - Add screenshot widget
 
 ### Installation:
 ```bash
