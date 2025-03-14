@@ -25,7 +25,7 @@
 ### Main programs:
  > bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip psmisc xclip scrot dunst 
 
-### My list programs:
+### Other programs:
 > xbps-install htop PrismLauncher steam telegram-dekstop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms filezilla eog nemo xournalpp intel-gpu-tools libwebkit2gtk lutris
 
 ### if you like my dots and want to contribute then make a pull request
