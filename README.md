@@ -18,15 +18,20 @@
  - Steam: [click](https://flathub.org/apps/io.github.Foldex.AdwSteamGtk)
  - Chromium: [click](https://chromewebstore.google.com/detail/gruvbox-material-dark/fjofdcgahcnlkdjapcbeonbnmjdnfcki)
 
-### Programs:
+### Main programs:
  ```bash
+ sudo xbps-install bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip psmisc xclip scrot dunst 
+ ```
+
+### My list programs:
+```bash
  # * Add repositories(non-free/multilib)
  sudo xbps-install void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
  sudo xbps-install -Syyu
 
- # * install programs
- sudo xbps-install bspwm rofi polybar nitrogen lxappearance htop neovim git PrismLauncher steam telegram-desktop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms filezilla eog nemo xournalpp intel-gpu-tools zsh pulseaudio pavucontrol libwebkit2gtk chronyd dhcpcd polkitd unzip psmisc lutris xclip scrot
- ```
+ # * Install programs
+sudo xbps-install htop PrismLauncher steam telegram-dekstop transmission-gtk openjdk21 krita vlc vscode nvidia nvidia-dkms filezilla eog nemo xournalpp intel-gpu-tools libwebkit2gtk lutris
+```
 ### if you like my dots and want to contribute then make a pull request
 ### To-Do:
  - Create bash script for installation dots.
