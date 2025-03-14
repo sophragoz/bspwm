@@ -16,12 +16,8 @@ super + ctrl + p
 super + alt + c
   scrot '%Y-%m-%d=%h-%M-screenshot.png' -e 'mv $f ~/Documents/screens/'
 
-alt + {_,shift + }Tab
-  bspc node -f {next,prev}.LOCAL
-
 super + {t,shift + t,s,f}
   bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-  bspc node -g {marked,locked,sticky,private}
 
 super + alt + {Left,Down,Up,Right}
   bspc node -p {west,south,north,east}
