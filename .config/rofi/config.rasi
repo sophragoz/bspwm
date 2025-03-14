@@ -1,4 +1,4 @@
-configuration {
+ configuration {
   modes: "drun";
   font: "JetBrainsMono Regular 10";
 }
@@ -57,6 +57,7 @@ listview {
   fixed-columns: true;
   background-color: @bg;
   text-color: @fg;
+  border: 0px 0px 0px 0px;
 }
 
 element {
