@@ -42,6 +42,7 @@ listview {
   background-color: @bg;
   fixed-height:   false;
   layout: horizontal;
+  border: 0px 0px 0px 0px;
 }
 
 element {
