@@ -1,11 +1,17 @@
 # Sophron's dots gruvbox
 
-### Preview
-![screen](screen.png)
-OLD SCREENSHOT
+![screen](https://github.com/sophragoz/bspwm/blob/main/screens/screen.png)
 
-### Layouts
 ![layouts](layouts.png)
+
+<details>
+ <summary>Screenshots</summary>
+ 
+ ![one](https://github.com/sophragoz/bspwm/blob/main/screens/one.png)
+ ![two](https://github.com/sophragoz/bspwm/blob/main/screens/two.png)
+ ![three](https://github.com/sophragoz/bspwm/blob/main/screens/three.png)
+ 
+</details>
 
 ### Themes for:
  - Telegram: [click](https://github.com/indev29/telegram-gruvbox)
