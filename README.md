@@ -26,7 +26,7 @@ OLD SCREENSHOT
 
 ### if you like my dots and want to contribute then make a pull request
 ### To-Do:
- - Create bash script for installation dots. (Testing stage)
+ - ~~Create bash script for installation dots.~~
  - migrate bar from polybar to eww
  - make notification demon (aka dunst)
  - ~~make logout menu (then migrate to eww)~~ migration to eww remains
@@ -110,6 +110,20 @@ rm -rf ~/tmp-folder
 # ! Themes won't install themselves, so go to lxappearance and select theme/icons/cursor, as well as font
 
 # * Done! Have a nice day!
+```
+
+</details>
+<details>
+  <summary> Install using bash script(Experemental!!)</summary>
+
+#### Supported distros:
+ - Debian, Ubuntu, Devuan, Knoppix
+ - Arch, Artix, Manjaro, EndeavourOS, Archman, Parabola, Hyperbola
+ - OpenSUSE Tumbleweed/Leap/etc...
+ - Void Linux
+##### if the bash script does not work, or there is no support for your distribution, please write in issue.
+```bash
+curl -sSL -o script.sh https://raw.githubusercontent.com/soprhagoz/bspwm/main/installer.sh && chmod +x installer.sh && ./installer.sh
 ```
 
 </details>
