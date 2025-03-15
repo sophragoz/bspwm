@@ -110,11 +110,11 @@ rm -rf ~/tmp-folder
 <details>
   <summary> Install using bash script(Experemental!!)</summary>
 
-#### Supported distros:
- - Debian, Ubuntu, Devuan, Knoppix
- - Arch, Artix, Manjaro, EndeavourOS, Archman, Parabola, Hyperbola
- - OpenSUSE Tumbleweed/Leap/etc...
- - Void Linux
+#### Supported distros in package manager:
+ - apt/apt-get(Debian based)
+ - pacman(Arch based)
+ - zypper
+ - xbps
 ##### if the bash script does not work, or there is no support for your distribution, please write in issue.
 ```bash
 curl -sSL -o script.sh https://raw.githubusercontent.com/soprhagoz/bspwm/main/installer.sh && chmod +x installer.sh && ./installer.sh
