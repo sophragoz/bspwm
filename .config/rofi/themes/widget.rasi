@@ -1,0 +1,33 @@
+@import "main.rasi"
+
+configuration {
+  font: "SymbolsNerdFontMono 10";
+}
+
+inputbar,
+prompt {
+  enabled: false;
+}
+
+element normal.normal,
+element alternate.normal,
+message,
+error-message {
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  width: 165;
+}
+
+listview {
+  fixed-height: false;
+  layout: horizontal;
+}
+
+element {
+  padding: 10px 15px 10px 15px;
+}
+
+

@@ -1,0 +1,8 @@
+@import "widget.rasi"
+
+window {
+  anchor: west;
+  location: west;
+  x-offset: 11;
+  y-offset: -450;
+}

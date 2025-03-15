@@ -5,7 +5,7 @@ reboot=""
 logout="󰈆"
 
 show_menu() {
-    echo -e "$poweroff\n$logout\n$reboot" | rofi -dmenu -config ~/.config/rofi/power.rasi 
+    echo -e "$poweroff\n$logout\n$reboot" | rofi -dmenu -config ~/.config/rofi/themes/power.rasi 
 }
 
 choice=$(show_menu)

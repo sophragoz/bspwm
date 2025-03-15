@@ -1,5 +1,5 @@
 alt + space
-  rofi -show drun
+  rofi -show drun -config ~/.config/rofi/themes/main.rasi
 
 super + e
   pkill -USR1 -x sxhkd
@@ -14,7 +14,7 @@ super + ctrl + p
   /usr/sbin/poweroff
 
 super + alt + c
-  scrot '%Y-%m-%d=%h-%M-screenshot.png' -e 'mv $f ~/Documents/screens/'
+  exec ~/.config/rofi/scripts/scrsht.sh
 
 super + {t,shift + t,s,f}
   bspc node -t {tiled,pseudo_tiled,floating,fullscreen}

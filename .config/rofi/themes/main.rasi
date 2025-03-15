@@ -1,11 +1,8 @@
- configuration {
+@import "colors.rasi"
+
+configuration {
   modes: "drun";
   font: "JetBrainsMono Regular 10";
-}
-
-* {
-  bg: #282828;
-  fg: #ebdbb2;
 }
 
 window {

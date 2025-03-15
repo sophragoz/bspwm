@@ -1,0 +1,9 @@
+@import "widget.rasi"
+@import "colors.rasi"
+
+window {
+  anchor: south;
+  location: south;
+  y-offset: -20;
+}
+

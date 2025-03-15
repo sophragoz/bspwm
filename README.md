@@ -35,7 +35,7 @@ OLD SCREENSHOT
  - Grub theme
  - Display manager
  - Plymouth
- - Add screenshot widget
+ - ~~Add screenshot widget~~
  - Add support for small monitors
 
 ### Installation:
