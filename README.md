@@ -39,6 +39,9 @@ OLD SCREENSHOT
  - Add support for small monitors
 
 ### Installation:
+<details>
+ <summary>Install manually</summary>
+ 
 ```bash
 # * Create folders for installing themes,icons,configs
 mkdir ~/.config
@@ -108,6 +111,8 @@ rm -rf ~/tmp-folder
 
 # * Done! Have a nice day!
 ```
+
+</details>
 
 ### Authors:
 > [Sophron's](https://github.com/sophragoz)
