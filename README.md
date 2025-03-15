@@ -26,7 +26,6 @@ OLD SCREENSHOT
  - migrate bar from polybar to eww
  - make notification demon (aka dunst)
  - Widget in workspace (conky)
- - Rules for apps 
  - Grub theme
  - Display manager
  - Plymouth
