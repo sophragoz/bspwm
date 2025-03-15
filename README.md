@@ -6,11 +6,6 @@
 ### Layouts
 ![layouts](layouts.png)
 
-### Features:
- - Minimalism
- - Minimal customized programs(kitty,nvim,polybar,wm)
- - BORDERS! MORE BORDERS!
-
 ### Themes for:
  - Telegram: [click](https://github.com/indev29/telegram-gruvbox)
  - Icons: [click](https://github.com/SylEleuth/gruvbox-plus-icon-pack)
