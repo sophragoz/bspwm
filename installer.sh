@@ -6,56 +6,117 @@ PKGS_SUSE="xorg-x11-server xinit libinput"
 PKGS_VOID="xorg xorg-server libinput xinit"
 PKGS_TWO_OPT="bspwm rofi polybar nitrogen sxhkd lxappearance zsh nemo picom flameshot neovim dunst jq xdg-desktop-portal-gtk unzip git"
 
-detect_distro() {
-    if [ -f /etc/os-release ]; then
-        . /etc/os-release
-        DISTRO=$ID
-    elif [ -f /etc/debian_version ]; then
-        DISTRO="debian"
+detect_pkg_mngr() {
+    if command -v apt-get &> /dev/null; then
+        PKG_MGR="apt-get"
+    elif command -v yum &> /dev/null; then
+        PKG_MGR="yum"
+    elif command -v dnf &> /dev/null; then
+        PKG_MGR="dnf"
+    elif command -v zypper &> /dev/null; then
+        PKG_MGR="zypper"
+    elif command -v pacman &> /dev/null; then
+        PKG_MGR="pacman"
+    elif command -v apk &> /dev/null; then
+        PKG_MGR="apk"
     else
-        echo ":: Not found os-release"
-	echo ":: Exiting"
+        echo ":: Not found package manager from available"
         exit 1
     fi
 }
 
 inst_pkgs() {
-	case $DISTRO in
-		debian|ubuntu|devuan|knoppix)
-			sudo apt update
-			sudo apt install -y $PKGS_OT_DEB $PKGS_TWO_OPT
-			;;
-		arch|artix|manjaro|endeavouros|archman|parabola|hyperbola)
-			sudo pacman -Syu --noconfirm $PKGS_OT_ARCH $PKGS_TWO_OPT
-			;;
-		opensuse)
-			sudo zypper refresh
-			sudo zypper -y in $PKGS_OT_SUSE $PKGS_TWO_OPT
-			;;
-		void)
-			sudo xbps-install -Syyu $PKGS_OT_VOID $PKGS_TWO_OPT
-			;;
-	esac
+    case $PACKAGE_MANAGER in
+        apt-get)
+            sudo apt-get update
+            sudo apt-get install -y $PKGS_OT_DEB $PKGS_TWO_OPT
+            ;;
+        zypper)
+            sudo zypper install -y $PKGS_OT_SUSE $PKGS_TWO_OPT
+            ;;
+        pacman)
+            sudo pacman -Syu --noconfirm $PKGS_OT_ARCH $PKGS_TWO_OPT
+            ;;
+	xbps)
+ 	    sudo xbps-install -Syyu $PKGS_OT_VOID $PKGS_TWO_OPT
+        *)
+            echo ":: Package manager is not supporting"
+            exit 1
+            ;;
+    esac
 }
 
 inst_git() {
-	case $DISTRO in
-		debian|ubuntu|devuan|knoppix)
-			sudo apt update
-			sudo apt install -y git
-			;;
-		arch|artix|manjaro|endeavouros|archman|parabola|hyperbola)
-			sudo pacman -Syu --noconfirm git
-			;;
-		opensuse)
-			sudo zypper refresh
-			sudo zypper -y in git
-			;;
-		void)
-			sudo xbps-install -Syyu git
-			;;
-	esac	        
+    case $PACKAGE_MANAGER in
+        apt-get)
+            sudo apt-get update
+            sudo apt-get install -y git
+            ;;
+        zypper)
+            sudo zypper install -y git
+            ;;
+        pacman)
+            sudo pacman -Syu --noconfirm git
+            ;;
+	xbps)
+ 	    sudo xbps-install -Syyu git
+        *)
+            echo ":: Package manager is not supporting"
+            exit 1
+            ;;
+    esac
 }
+
+#dect_distro() {
+#    if [ -f /etc/os-release ]; then
+#        . /etc/os-release
+#       DISTRO=$ID
+#    elif [ -f /etc/debian_version ]; then
+#        DISTRO="debian"
+#    else
+#        echo ":: Not found os-release"
+#	echo ":: Exiting"
+#        exit 1
+#    fi
+#}
+
+#inst_pkgs() {
+#	case $DISTRO in
+#		debian|ubuntu|devuan|knoppix)
+#			sudo apt update
+#			sudo apt install -y $PKGS_OT_DEB $PKGS_TWO_OPT
+#			;;
+#		arch|artix|manjaro|endeavouros|archman|parabola|hyperbola)
+#			sudo pacman -Syu --noconfirm $PKGS_OT_ARCH $PKGS_TWO_OPT
+#			;;
+#		opensuse)
+#			sudo zypper refresh
+#			sudo zypper -y in $PKGS_OT_SUSE $PKGS_TWO_OPT
+#			;;
+#		void)
+#			sudo xbps-install -Syyu $PKGS_OT_VOID $PKGS_TWO_OPT
+#			;;
+#	esac
+#}
+
+#inst_git() {
+#	case $DISTRO in
+#		debian|ubuntu|devuan|knoppix)
+#			sudo apt update
+#			sudo apt install -y git
+#			;;
+#		arch|artix|manjaro|endeavouros|archman|parabola|hyperbola)
+#			sudo pacman -Syu --noconfirm git
+#			;;
+#		opensuse)
+#			sudo zypper refresh
+#			sudo zypper -y in git
+#			;;
+#		void)
+#			sudo xbps-install -Syyu git
+#			;;
+#	esac	        
+#}
 
 agr_and_diss() {
   echo ":: Are you ready? 4 if yes, 5 if no"
