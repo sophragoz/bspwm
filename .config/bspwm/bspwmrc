@@ -1,11 +1,13 @@
 #!/bin/bash
 
 sxhkd &
+conky -q &
 nitrogen --restore &
 polybar -c ~/.config/polybar/config.ini &
 xsetroot -cursor_name left_ptr &
 picom --config ~/.config/picom/picom.conf &
 /usr/libexec/xdg-desktop-portal-gtk &
+dunst -conf ~/.config/dunst/dunstrc &
 
 bspc monitor -d 1 2 3 4 5 6
 
