@@ -120,7 +120,7 @@ rm -rf ~/tmp-folder
  - xbps
 ##### if the bash script does not work, or there is no support for your distribution, please write in issue.
 ```bash
-curl -sSL -o script.sh https://raw.githubusercontent.com/soprhagoz/bspwm/main/installer.sh && chmod +x installer.sh && ./installer.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sophragoz/bspwm/refs/heads/main/installer.sh)"
 ```
 
 </details>
