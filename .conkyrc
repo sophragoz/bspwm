@@ -1,0 +1,30 @@
+conky.config = {
+  out_to_x = true,
+  background = true,
+  own_window = true,
+  own_window_transparent = true,
+  own_window_type = 'desktop',
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  double_buffer = true,
+  draw_shades = false,
+  draw_outline = false,
+  draw_graph_borders = false,
+  default_color = '#282828',
+  alignment = 'bottom_left',
+  gap_x = 40,
+  gap_y = 40,
+  update_interval = 1,
+  uppercase = false,
+  use_spacer = 'none',
+  override_utf8_locale = true,
+  use_xft = true;
+  font = 'JetBrainsMono:size=30',
+}
+
+conky.text = [[
+${if_match ${time %H} < 6}Good night${else}${if_match ${time %H} < 12}Good morning${else}${if_match ${time %H} < 18}Good day${else}Good evening${endif}${endif}${endif}
+Date ${time %Y-%m-%d}
+Uptime ${uptime}
+Memory ${mem}
+Disk ${fs_used /} / ${fs_size /}  
+]];
