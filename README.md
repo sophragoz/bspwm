@@ -128,5 +128,4 @@ rm -rf ~/tmp-folder
 > [Sophron's](https://github.com/sophragoz)
 
 > [Vovanvladimir](https://github.com/Vovanvladimir)
-
-# Made with love
+------
