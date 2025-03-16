@@ -1,6 +1,6 @@
-![screen](https://github.com/sophragoz/bspwm/blob/main/screens/screen.png)
+![screen](screens/screen.png)
 
-![layouts](layouts.png)
+![layouts](screens/layouts.png)
 
 <details>
  <summary>Screenshots</summary>
