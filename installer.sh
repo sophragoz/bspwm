@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 
+# * Bash script installer
+# * Credits: 
+# * Name, Description, github
+# - Sophron Ragozin, script reconstruction(https://github.com/sophragoz/)
+# - Vovan Vladimir, the script itself(https://github.com/Vovanvladimir)
+
+# Env packages for inst_pkgs func
 PKGS_DEB="xorg xserver-xorg xinit xserver-xorg-input libinput"
 PKGS_ARCH="xorg-server xorg-xinit libinput"
 PKGS_SUSE="xorg-x11-server xinit libinput"
 PKGS_VOID="xorg xorg-server libinput xinit"
 PKGS_TWO_OPT="bspwm rofi polybar nitrogen sxhkd lxappearance zsh nemo picom flameshot neovim dunst jq xdg-desktop-portal-gtk unzip git"
 
-detect_pkg_mngr() {
+# Detectiong package manager
+detect_pkg_mgr() {
     if command -v apt-get &> /dev/null; then
         PKG_MGR="apt-get"
     elif command -v yum &> /dev/null; then
@@ -25,20 +33,22 @@ detect_pkg_mngr() {
     fi
 }
 
+# Install packages in detected package manager
 inst_pkgs() {
-    case $PACKAGE_MANAGER in
+    case $PKG_MGR in
         apt-get)
             sudo apt-get update
-            sudo apt-get install -y $PKGS_OT_DEB $PKGS_TWO_OPT
+            sudo apt-get install -y $PKGS_DEB $PKGS_TWO_OPT
             ;;
         zypper)
-            sudo zypper install -y $PKGS_OT_SUSE $PKGS_TWO_OPT
+            sudo zypper install -y $PKGS_SUSE $PKGS_TWO_OPT
             ;;
         pacman)
-            sudo pacman -Syu --noconfirm $PKGS_OT_ARCH $PKGS_TWO_OPT
+            sudo pacman -Syu --noconfirm $PKGS_ARCH $PKGS_TWO_OPT
             ;;
 	xbps)
- 	    sudo xbps-install -Syyu $PKGS_OT_VOID $PKGS_TWO_OPT
+ 	    sudo xbps-install -Syyu $PKGS_VOID $PKGS_TWO_OPT
+      	    ;;
         *)
             echo ":: Package manager is not supporting"
             exit 1
@@ -46,8 +56,9 @@ inst_pkgs() {
     esac
 }
 
+# Install git for one opt
 inst_git() {
-    case $PACKAGE_MANAGER in
+    case $PKG_MGR in
         apt-get)
             sudo apt-get update
             sudo apt-get install -y git
@@ -60,6 +71,7 @@ inst_git() {
             ;;
 	xbps)
  	    sudo xbps-install -Syyu git
+            ;;
         *)
             echo ":: Package manager is not supporting"
             exit 1
@@ -67,6 +79,9 @@ inst_git() {
     esac
 }
 
+# Detect distro
+# (commented because it has a limited list of distributions)
+# -=-=-=-
 #dect_distro() {
 #    if [ -f /etc/os-release ]; then
 #        . /etc/os-release
@@ -80,6 +95,9 @@ inst_git() {
 #    fi
 #}
 
+# Install packages in detected distro
+# (commented because it has a limited list of distributions)
+# -=-=-=-
 #inst_pkgs() {
 #	case $DISTRO in
 #		debian|ubuntu|devuan|knoppix)
@@ -99,6 +117,9 @@ inst_git() {
 #	esac
 #}
 
+# Install git for detected package manager
+# (commented because it has a limited list of distributions)
+# -=-=-=-
 #inst_git() {
 #	case $DISTRO in
 #		debian|ubuntu|devuan|knoppix)
@@ -118,6 +139,7 @@ inst_git() {
 #	esac	        
 #}
 
+# Agree and dissmiss 
 agr_and_diss() {
   echo ":: Are you ready? 4 if yes, 5 if no"
   read -p "Type 4 or 5: " select_yes_or_no
@@ -132,6 +154,7 @@ agr_and_diss() {
   fi
 }
 
+# Start script
 start_script() {
   echo ":: Installer dots Sophron's ::"
   echo "  - Answer"
@@ -141,6 +164,7 @@ start_script() {
   read -p "Type 1 or 2: " var
 }
 
+# Install one option
 inst_one() {
   echo ":: Installing.."
   mkdir tmp
@@ -153,13 +177,14 @@ inst_one() {
   chmod +x ~/.xinitrc
 }
 
+# Install git
 inst_qt() {
   echo ":: Install qt theme?"
   echo "4 - yes, 5 - no"
   read -p "Type 4 or 5: " qt_inst_opt
   if [ "$qt_inst_opt" -eq 4 ]; then
 	 wget https://github.com/sachnr/gruvbox-kvantum-themes/releases/download/1.1/Gruvbox-Dark-Blue.tar.gz
-         tar -xfv Gruvbox-Dark-blue.tar.gz
+         tar -xf Gruvbox-Dark-blue.tar.gz
 	 cp -r Documents ~/kvantum-theme
 	 echo "::* Qt theme downloaded and copyed ~/kvantum-theme"
  	 echo "::* Launch kvantum manager and install theme."
@@ -172,25 +197,27 @@ inst_qt() {
   fi
 }
 
+# Install neovim plugin manager
 inst_nvim() {
   echo "::install vim-plug?"
   echo "4 - yes, 5 - no"
   read -p "Type 4 or 5: " vim_inst_opt
-  if [ "$qt_inst_opt" -eq 4 ]; then
+  if [ "$vim_inst_opt" -eq 4 ]; then
 	  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	  echo ":: vim-plug installed."
 	  echo ":: please run nvim and write :PlugInstall"
 	  echo ":: for install gruvbox theme"
-  elif [ "$qt_inst_opt" -eq 5 ]; then
+  elif [ "$vim_inst_opt" -eq 5 ]; then
 	 echo ""
   else
 	 echo ":: False."
   fi 
 }
 
+# Install two option
 inst_two() {
-  opt_inst_one
+  inst_one
   mkdir ~/.icons
   mkdir ~/.themes
   mkdir ~/.fonts
@@ -211,6 +238,7 @@ inst_two() {
   ./Gruvbox-GTK-Theme/themes/install.sh -t default
 }
 
+# Done installation
 done_inst() {
   cd ..
   rm -rf tmp
@@ -218,12 +246,16 @@ done_inst() {
   exit 0
 }
 
+# Additional info
 addit_info() {
   echo "-> AFTER INSTALLATION"
   echo ":: Run lxappearance to install theme, icons, cursor, and font"
 }
 
+# Install dots
+# Main function for installing dots
 install_dots() {
+  detect_pkg_mgr
   if [ "$var" -eq 1 ]; then
 	agr_and_diss
 	inst_git
@@ -232,7 +264,7 @@ install_dots() {
 	done_inst
   elif [ "$var" -eq 2 ]; then
 	agr_and_diss
-	install_pkgs
+	inst_pkgs
 	inst_two
 	inst_qt
 	inst_nvim
