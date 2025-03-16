@@ -1,5 +1,3 @@
-# Sophron's dots gruvbox
-
 ![screen](https://github.com/sophragoz/bspwm/blob/main/screens/screen.png)
 
 ![layouts](layouts.png)
