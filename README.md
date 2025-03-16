@@ -28,7 +28,6 @@
 ### if you like my dots and want to contribute then make a pull request
 ### To-Do:
  - migrate bar from polybar to eww
- - make notification demon (aka dunst)
  - Widget in workspace (conky)
  - Grub theme
  - Display manager
