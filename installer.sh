@@ -109,24 +109,24 @@ start_script() {
 inst_one() {
   echo ":: Installing.."
   mkdir tmp
-  cd tmp
-  git clone https://github.com/sophragoz/bspwm
-  cp -r bspwm/.config ~/
-  cp -r bspwm/.xinitrc ~/
+  git clone https://github.com/sophragoz/bspwm tmp/bspwm
+  cp -r tmp/bspwm/.config ~/
+  cp -r tmp/bspwm/.xinitrc ~/
+  cp -r tmp/bspwm/.conkyrc ~/
   chmod +x ~/.config/bspwm/bspwmrc
   chmod +x ~/.config/sxhkd/sxhkd
   chmod +x ~/.xinitrc
 }
 
-# Install git
+# Install qt
 inst_qt() {
   echo ":: Install qt theme?"
   echo "4 - yes, 5 - no"
   read -p "Type 4 or 5: " qt_inst_opt
   if [ "$qt_inst_opt" -eq 4 ]; then
-	 wget https://github.com/sachnr/gruvbox-kvantum-themes/releases/download/1.1/Gruvbox-Dark-Blue.tar.gz
-         tar -xf Gruvbox-Dark-blue.tar.gz
-	 cp -r Documents ~/kvantum-theme
+	 wget -P tmp/ https://github.com/sachnr/gruvbox-kvantum-themes/releases/download/1.1/Gruvbox-Dark-Blue.tar.gz 
+         tar -xf Gruvbox-Dark-blue.tar.gz -C tmp/
+	 cp -r tmp/Documents ~/kvantum-theme
 	 echo "::* Qt theme downloaded and copyed ~/kvantum-theme"
  	 echo "::* Launch kvantum manager and install theme."
 	 echo "::* select a topic from the list of those available in the program."
@@ -162,21 +162,21 @@ inst_two() {
   mkdir ~/.icons
   mkdir ~/.themes
   mkdir ~/.fonts
-  wget https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases/download/v6.1.1/gruvbox-plus-icon-pack-6.1.1.zip
-  wget https://github.com/sainnhe/capitaine-cursors/releases/download/r5/Linux.zip
-  git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme
-  wget https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip
-  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/NerdFontsSymbolsOnly.zip
-  unzip gruvbox-plus-icon-pack-6.1.1.zip
-  unzip Linux.zip
-  unzip JetBrainsMono-2.304.zip
-  unzip NerdFontsSymbolsOnly.zip
-  cp -r Gruvbox-Plus-Dark ~/.icons/icon
-  cp -r Capitaine\ Cursors\ \(Gruvbox\)\ -\ White/ ~/.icons/cursor
-  cp -r fonts/ttf/* ~/.fonts/
-  cp -r SymbolsNerdFontMono-Regular.ttf ~/.fonts/
-  chmod +x Gruvbox-GTK-Theme/themes/install.sh
-  ./Gruvbox-GTK-Theme/themes/install.sh -t default
+  wget -P tmp/ https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases/download/v6.1.1/gruvbox-plus-icon-pack-6.1.1.zip
+  wget -P tmp/ https://github.com/sainnhe/capitaine-cursors/releases/download/r5/Linux.zip
+  git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme tmp/Gruvbox-GTK-Theme
+  wget -P tmp/ https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip
+  wget -P tmp/ https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/NerdFontsSymbolsOnly.zip
+  unzip gruvbox-plus-icon-pack-6.1.1.zip -d tmp/
+  unzip Linux.zip -d tmp/
+  unzip JetBrainsMono-2.304.zip -d tmp/
+  unzip NerdFontsSymbolsOnly.zip -d tmp/
+  cp -r tmp/Gruvbox-Plus-Dark ~/.icons/icon
+  cp -r tmp/Capitaine\ Cursors\ \(Gruvbox\)\ -\ White/ ~/.icons/cursor
+  cp -r tmp/fonts/ttf/* ~/.fonts/
+  cp -r tmp/SymbolsNerdFontMono-Regular.ttf ~/.fonts/
+  chmod +x tmp/Gruvbox-GTK-Theme/themes/install.sh
+  ./tmp/Gruvbox-GTK-Theme/themes/install.sh -t default
 }
 
 # Done installation
