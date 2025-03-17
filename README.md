@@ -30,8 +30,6 @@
  - migrate bar from polybar to eww
  - Grub theme
  - Display manager
- - Plymouth
- - Add support for small monitors
 
 ### Installation:
 <details>
