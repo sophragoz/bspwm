@@ -7,11 +7,12 @@
 # - Vovan Vladimir, the script itself(https://github.com/Vovanvladimir)
 
 # Env packages for inst_pkgs func
-PKGS_DEB="xorg xserver-xorg xinit xserver-xorg-input libinput"
-PKGS_ARCH="xorg-server xorg-xinit libinput"
-PKGS_SUSE="xorg-x11-server xinit libinput"
-PKGS_VOID="xorg xorg-server libinput xinit"
-PKGS_TWO_OPT="bspwm rofi polybar nitrogen sxhkd lxappearance zsh nemo picom flameshot neovim dunst jq xdg-desktop-portal-gtk unzip git"
+PKGS_DEB="xorg xserver-xorg xinit xserver-xorg-input"
+PKGS_ARCH="xorg-server xorg-xinit"
+PKGS_SUSE="xorg-x11-server xinit"
+PKGS_VOID="xorg xorg-server xinit"
+PKGS_TWO_OPT="bspwm rofi polybar nitrogen sxhkd lxappearance zsh nemo picom flameshot neovim dunst jq xdg-desktop-portal-gtk unzip git libinput conky cairo-dock"
+PKGS_ONE_OPT="git wget"
 
 # Detectiong package manager
 detect_pkg_mgr() {
@@ -61,83 +62,23 @@ inst_git() {
     case $PKG_MGR in
         apt-get)
             sudo apt-get update
-            sudo apt-get install -y git
+            sudo apt-get install -y $PKGS_ONE_OPT
             ;;
         zypper)
-            sudo zypper install -y git
+            sudo zypper install -y $PKGS_ONE_OPT
             ;;
         pacman)
-            sudo pacman -Syu --noconfirm git
+            sudo pacman -Syu --noconfirm $PKGS_ONE_OPT
             ;;
 	xbps)
- 	    sudo xbps-install -Syyu git
+ 	    sudo xbps-install -Syyu $PKGS_ONE_OPT
             ;;
         *)
             echo ":: Package manager is not supporting"
-            exit 1
+            exit 0
             ;;
     esac
 }
-
-# Detect distro
-# (commented because it has a limited list of distributions)
-# -=-=-=-
-#dect_distro() {
-#    if [ -f /etc/os-release ]; then
-#        . /etc/os-release
-#       DISTRO=$ID
-#    elif [ -f /etc/debian_version ]; then
-#        DISTRO="debian"
-#    else
-#        echo ":: Not found os-release"
-#	echo ":: Exiting"
-#        exit 1
-#    fi
-#}
-
-# Install packages in detected distro
-# (commented because it has a limited list of distributions)
-# -=-=-=-
-#inst_pkgs() {
-#	case $DISTRO in
-#		debian|ubuntu|devuan|knoppix)
-#			sudo apt update
-#			sudo apt install -y $PKGS_OT_DEB $PKGS_TWO_OPT
-#			;;
-#		arch|artix|manjaro|endeavouros|archman|parabola|hyperbola)
-#			sudo pacman -Syu --noconfirm $PKGS_OT_ARCH $PKGS_TWO_OPT
-#			;;
-#		opensuse)
-#			sudo zypper refresh
-#			sudo zypper -y in $PKGS_OT_SUSE $PKGS_TWO_OPT
-#			;;
-#		void)
-#			sudo xbps-install -Syyu $PKGS_OT_VOID $PKGS_TWO_OPT
-#			;;
-#	esac
-#}
-
-# Install git for detected package manager
-# (commented because it has a limited list of distributions)
-# -=-=-=-
-#inst_git() {
-#	case $DISTRO in
-#		debian|ubuntu|devuan|knoppix)
-#			sudo apt update
-#			sudo apt install -y git
-#			;;
-#		arch|artix|manjaro|endeavouros|archman|parabola|hyperbola)
-#			sudo pacman -Syu --noconfirm git
-#			;;
-#		opensuse)
-#			sudo zypper refresh
-#			sudo zypper -y in git
-#			;;
-#		void)
-#			sudo xbps-install -Syyu git
-#			;;
-#	esac	        
-#}
 
 # Agree and dissmiss 
 agr_and_diss() {
