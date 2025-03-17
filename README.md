@@ -23,7 +23,7 @@
  - Chromium: [click](https://chromewebstore.google.com/detail/gruvbox-material-dark/fjofdcgahcnlkdjapcbeonbnmjdnfcki)
 
 ### Programs:
- > bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh unzip xclip scrot dunst
+ > bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh unzip xclip scrot dunst conky cairo-dock jq
 
 ### if you like my dots and want to contribute then make a pull request
 ### To-Do:
@@ -45,18 +45,13 @@ mkdir ~/.themes
 mkdir ~/.fonts
 
 # * Clone the repo in any folder
-git clone https://github.com/sophragoz/bspwm
+git clone https://github.com/sophragoz/bspwm tmp/bspwm
 cd bspwm
 
 # * Copy .config and .xinitrc folder in ~/ directory
 cp -r .config ~/
 cp -r .xinitrc ~/
-
-# * Install plug-vim, and Install plugin theme
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# :PlugInstall
-# :wq
+cp -r .conkyrc ~/
 
 # * Make executable bspwmrc, .xinitrc and sxhkdrc for starting wm
 chmod +x ~/.config/bspwm/bspwmrc
@@ -64,43 +59,47 @@ chmod +x ~/.config/sxhkd/sxhkdrc
 chmod +x ~/.xinitrc
 
 # * Download cursor, icons, themes, fonts
-mkdir tmp-folder
-cd tmp-folder
-wget https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases/download/v6.1.1/gruvbox-plus-icon-pack-6.1.1.zip # icon theme
-wget https://github.com/sainnhe/capitaine-cursors/releases/download/r5/Linux.zip # cursor theme
-git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme # gtk theme(qt you can install it later if you need it)
-wget https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip # defaults fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/NerdFontsSymbolsOnly.zip # fonts for symbols
+mkdir tmp
+wget -P tmp/ https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases/download/v6.1.1/gruvbox-plus-icon-pack-6.1.1.zip # icon theme
+wget -P tmp/ https://github.com/sainnhe/capitaine-cursors/releases/download/r5/Linux.zip # cursor theme
+git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme tmp/Gruvbox-GTK-Theme # gtk theme(qt you can install it later if you need it)
+wget -P tmp/ https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip # defaults fonts
+wget -P tmp/ https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/NerdFontsSymbolsOnly.zip # fonts for symbols
 
 # * Unpack archives
-unzip gruvbox-plus-icon-pack-6.1.1.zip
-unzip Linux.zip
-unzip JetBrainsMono-2.304.zip
-unzip NerdFontsSymbolsOnly.zip
+unzip tmp/gruvbox-plus-icon-pack-6.1.1.zip -d tmp/
+unzip tmp/Linux.zip -d tmp/
+unzip tmp/JetBrainsMono-2.304.zip -d tmp/
+unzip tmp/NerdFontsSymbolsOnly.zip -d tmp/
 
 # * Install and copy themes/fonts
 # * For your convenience, the names of the directories within the topics will be shortened
-cp -r Gruvbox-Plus-Dark ~/.icons/icon
-cp -r Capitaine\ Cursors\ \(Gruvbox\)\ -\ White/ ~/.icons/cursor
-rm -r fonts/ttf/JetBrainsMonoNL-* #OPTIONAL! because you might need it
-cp -r fonts/ttf/* ~/.fonts/
-cp -r SymbolsNerdFontMono-Regular.ttf ~/.fonts/
+cp -r tmp/Gruvbox-Plus-Dark ~/.icons/icon
+cp -r tmp/Capitaine\ Cursors\ \(Gruvbox\)\ -\ White/ ~/.icons/cursor
+rm -r tmp/fonts/ttf/JetBrainsMonoNL-* #OPTIONAL! because you might need it
+cp -r tmp/fonts/ttf/* ~/.fonts/
+cp -r tmp/SymbolsNerdFontMono-Regular.ttf ~/.fonts/
 
 # * Install defualt gruvbox gtk theme(using bash script)
-cd Gruvbox-GTK-Theme/themes
-chmod +x install.sh
-./install.sh -t default
+chmod +x /tmp/Gruvbox-GTK-Theme/themes/install.sh
+./tmp/Gruvbox-GTK-Theme/themes/install.sh -t default
 
 # * (Optional) Install qt theme
-wget https://github.com/sachnr/gruvbox-kvantum-themes/releases/download/1.1/Gruvbox-Dark-Blue.tar.gz
-tar -xfv Gruvbox-Dark-blue.tar.gz
+wget -P tmp/ https://github.com/sachnr/gruvbox-kvantum-themes/releases/download/1.1/Gruvbox-Dark-Blue.tar.gz
+tar -xfv Gruvbox-Dark-blue.tar.gz 
 # go to kvantum manager, and select the directory with this theme and install.
 # then select it from the list of installed ones
 # Done!
 
+# * Install plug-vim, and Install plugin theme
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# :PlugInstall
+# :wq
+
 # * Cleaning tmp files
 clear
-rm -rf ~/tmp-folder
+rm -rf tmp
 
 # ! Themes won't install themselves, so go to lxappearance and select theme/icons/cursor, as well as font
 
