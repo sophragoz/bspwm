@@ -3,12 +3,14 @@
 sxhkd &
 conky -q &
 nitrogen --restore &
-polybar -c ~/.config/polybar/config.ini &
+#polybar -c ~/.config/polybar/config.ini & 
 xsetroot -cursor_name left_ptr &
 picom --config ~/.config/picom/picom.conf &
 /usr/libexec/xdg-desktop-portal-gtk &
 dunst -conf ~/.config/dunst/dunstrc &
-cairo-dock &
+cairo-dock -f &
+polybar -c ~/.config/eww/modules/bar/polybar-air.ini & # Is fix stacking for eww, see faq 1
+eww open bar &
 
 bspc monitor -d 1 2 3 4 5 6
 

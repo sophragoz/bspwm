@@ -1,0 +1,9 @@
+(defwidget center []
+  (box :orientation "h"
+       :halign "center"
+       :space-evenly "false"
+       :spacing 8
+       (label :class "time" :text TIME)
+       (label :class "separator" :text "::")
+       (label :class "weather" :text WEATHER)
+       ))

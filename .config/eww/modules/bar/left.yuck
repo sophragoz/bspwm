@@ -1,0 +1,12 @@
+(defwidget left []
+  (box :orientation "h"
+       :space-evenly "false"
+       :spacing 8
+       :onmouseover "eww update volume_mouseover=true"
+       :onmouseleave "eww update volume_mouseover=false"
+       (button :class "power" :onclick "exec ~/.config/rofi/scripts/power.sh" "")
+       (label :class "pipe" :text "|")
+       (label :class "volume" :text VOL)
+       (label :class "separator" :text "::")
+       (label :class "layout" :text LAYOUT)
+       ))

@@ -1,0 +1,24 @@
+(defwidget right []
+  (eventbox
+    (box
+      :orientation "h"
+      :space-evenly "false"
+      :spacing 2
+      :halign "end"
+      (workspaces))))
+
+(defwidget workspaces []
+  (box
+    :class "workspaces"
+    :orientation "horizontal"
+    :spacing 0
+    (for workspace in workspaces
+      (button
+        :class {workspace.active ? "w-actv" : "w"}
+        :onclick "bspc desktop -f ${workspace.name}"
+        :hexpand true
+        "${workspace.name}"
+       )
+     )
+   )
+ )

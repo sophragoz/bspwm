@@ -1,0 +1,50 @@
+$bg: #282828;
+$bg1: #504945;
+$fg: #ebdbb2;
+
+* {
+  font-family: Jetbrains Mono;
+  font-weight: Bold;
+}
+
+.bar {
+  background: $bg;
+}
+
+.time {
+  background: $fg;
+  color: $bg;
+  border-radius: 6px;
+  padding: 1px 3px 1px 3px;
+  margin: 6px 3px 6px 3px;
+}
+
+.power {
+  background: $fg;
+  color: $bg;
+  border-radius: 12px;
+  padding: 1px 6px 1px 2px;
+  margin: 7px 0px 7px 10px;
+}
+
+.workspaces {
+  background: $bg;
+  color: $fg;
+  border-radius: 12px;
+  padding: 3px 6px 3px 6px;
+  margin: 4px 3px 4px 3px;
+}
+
+.w {
+  background: $bg1;
+  color: $fg;
+  padding: 0px 4px;
+  margin: 0px 3px;
+}
+
+.w-actv {
+  background: $fg;
+  color: $bg;
+  padding: 0px 4px;
+  margin: 0px 3px;
+}

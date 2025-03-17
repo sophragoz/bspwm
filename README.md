@@ -25,11 +25,12 @@
 ### Programs:
  > bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh unzip xclip scrot dunst conky cairo-dock jq
 
-### if you like my dots and want to contribute then make a pull request
 ### To-Do:
- - migrate bar from polybar to eww
  - Grub theme
  - Display manager
+
+### FAQ
+ - 1: what's happened polybar-air.ini? This is a fix for the eww bug, see commit [#178](https://github.com/elkowar/eww/issues/178)
 
 ### Installation:
 <details>
