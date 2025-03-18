@@ -27,6 +27,7 @@
 
 ### FAQ
  - 1: what's happened polybar-air.ini? This is a fix for the eww bug, see commit [#178](https://github.com/elkowar/eww/issues/178)
+ - 2: Why Script installer works with errors? The script is currently being tested, it may contain errors, if you find an error, please report it in the commit
 
 ### Installation:
 <details>
