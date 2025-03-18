@@ -1,0 +1,12 @@
+(defwindow volumec
+  :monitor 0
+  :hexpand false
+  :vexpand false
+  :class "volumec"
+  :geometry (geometry :x "-824" :y "56" :width "250px" :height "20px" :anchor "top center")
+  (volume_scale))
+
+(defwidget volume_scale []
+  (overlay :hexpand true 
+    (scale :min 0 :max 101 :active {volume != "muted"} :value {VOL == "muted" ? 0 : VOL} :onchange "pamixer --set-volume {}" :class "volume-scale no-slider")
+    (button :class "close-button" :onclick "eww close volumec" " ")))

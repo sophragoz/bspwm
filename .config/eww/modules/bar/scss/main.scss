@@ -1,0 +1,8 @@
+.bar {
+  background: $bg;
+}
+
+@import 'left.scss';
+@import 'center.scss';
+@import 'right.scss';
+@import 'vol-menu.scss';

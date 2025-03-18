@@ -1,3 +1,8 @@
+(include "modules/bar/pos/left.yuck")
+(include "modules/bar/pos/center.yuck")
+(include "modules/bar/pos/right.yuck")
+(include "modules/bar/pos/volume.yuck")
+
 (defwindow bar
             :monitor 0
             :geometry (geometry :x "0%"

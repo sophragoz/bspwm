@@ -1,5 +1,2 @@
 (include "modules/bar/defpoll.yuck")
 (include "modules/bar/bar.yuck") 
-(include "modules/bar/center.yuck")
-(include "modules/bar/left.yuck")
-(include "modules/bar/right.yuck")

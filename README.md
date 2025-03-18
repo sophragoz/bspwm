@@ -25,10 +25,6 @@
 ### Programs:
  > bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh unzip xclip scrot dunst conky cairo-dock jq
 
-### To-Do:
- - Grub theme
- - Display manager
-
 ### FAQ
  - 1: what's happened polybar-air.ini? This is a fix for the eww bug, see commit [#178](https://github.com/elkowar/eww/issues/178)
 
