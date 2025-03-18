@@ -28,7 +28,7 @@
 
 ### Programs:
 ```
-bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh unzip xclip scrot dunst conky cairo-dock jq
+bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh unzip xclip scrot dunst conky cairo-dock jq eww
 ```
 
 ### FAQ
