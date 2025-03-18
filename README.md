@@ -22,8 +22,14 @@
  - Steam: [click](https://flathub.org/apps/io.github.Foldex.AdwSteamGtk)
  - Chromium: [click](https://chromewebstore.google.com/detail/gruvbox-material-dark/fjofdcgahcnlkdjapcbeonbnmjdnfcki)
 
+> [!WARNING]  
+> Dots currently supporting resolution is 1920x1080.
+> Didn't Supports in other resolutions.
+
 ### Programs:
- > bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh unzip xclip scrot dunst conky cairo-dock jq
+```
+bspwm rofi sxhkd polybar nitrogen lxappearance htop neovim git zsh unzip xclip scrot dunst conky cairo-dock jq
+```
 
 ### FAQ
  - 1: what's happened polybar-air.ini? This is a fix for the eww bug, see commit [#178](https://github.com/elkowar/eww/issues/178)
