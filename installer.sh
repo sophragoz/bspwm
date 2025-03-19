@@ -109,10 +109,13 @@ start_script() {
 inst_one() {
   echo ":: Installing.."
   mkdir tmp
-  git clone https://github.com/sophragoz/bspwm tmp/bspwm
-  cp -r tmp/bspwm/.config ~/
-  cp -r tmp/bspwm/.xinitrc ~/
-  cp -r tmp/bspwm/.conkyrc ~/
+  mkdir ~/.icons
+  mkdir ~/.themes
+  mkdir ~/.fonts
+  git clone https://github.com/sophragoz/dots tmp/dots
+  cp -r tmp/dots/.config ~/
+  cp -r tmp/dots/.xinitrc ~/
+  cp -r tmp/dots/.conkyrc ~/
   chmod +x ~/.config/bspwm/bspwmrc
   chmod +x ~/.config/sxhkd/sxhkd
   chmod +x ~/.xinitrc
@@ -159,9 +162,6 @@ inst_nvim() {
 # Install two option
 inst_two() {
   inst_one
-  mkdir ~/.icons
-  mkdir ~/.themes
-  mkdir ~/.fonts
   wget -P tmp/ https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases/download/v6.1.1/gruvbox-plus-icon-pack-6.1.1.zip
   wget -P tmp/ https://github.com/sainnhe/capitaine-cursors/releases/download/r5/Linux.zip
   git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme tmp/Gruvbox-GTK-Theme
