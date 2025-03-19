@@ -129,3 +129,9 @@ rm -rf tmp
 
 > [Vovanvladimir](https://github.com/Vovanvladimir)
 ------
+### Other dots(from friends)
+- [Niri material you](https://github.com/binarylinuxx/Niri-material-you) and [other dots](https://github.com/binarylinuxx/binary-dots) from binarylinuxx
+- [Beatiful ags](https://github.com/witttccchhher/nix-conf) from witttccchhher
+- [Monet dots](github.com/spbog/dotfiles) from spbog
+
+
