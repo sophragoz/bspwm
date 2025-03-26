@@ -1,6 +1,9 @@
+;; bar modules
 (include "modules/bar/pos/left.yuck")
 (include "modules/bar/pos/center.yuck")
 (include "modules/bar/pos/right.yuck")
+
+;; widgets
 (include "modules/bar/pos/volume.yuck")
 (include "modules/bar/pos/weather.yuck")
 (include "modules/bar/pos/calendar.yuck")
