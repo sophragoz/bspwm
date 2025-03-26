@@ -3,6 +3,6 @@
        :halign "center"
        :space-evenly "false"
        :spacing 8
-       (button :class "time" :onclick "dunstify 'it is test'" TIME)
+       (button :class "time" :onclick "eww open mycal" TIME)
        (label :class "separator" :text "::")
        (button :class "weather" :onclick "~/.config/eww/modules/bar/scripts/weather_widget_open.sh" WEATHER)))

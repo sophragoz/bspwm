@@ -1,0 +1,20 @@
+.cal-inner-elems,
+.mycal {
+  background: $bg;
+}
+
+.close-button {
+  background: $fg;
+  color: $bg;
+  margin: 5px 10px 5px 10.6em;
+}
+
+.cal-date {
+  all: unset;
+}
+
+calendar:selected {
+  color: $bg;
+  background-color: $fg;
+  border-radius: 6px;
+}

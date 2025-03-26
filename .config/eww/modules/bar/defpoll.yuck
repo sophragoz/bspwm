@@ -13,3 +13,9 @@
 (defpoll WEATHER_WIND :interval "600s" "modules/bar/scripts/weather_wind.sh")
 (defpoll WEATHER_CITY :interval "600s" "modules/bar/scripts/weather_contrycity.sh")
 
+;; Calendar widget
+(defpoll CAL_DAY :interval "10h" "date '+%d'")
+(defpoll CAL_YEAR :interval "10h" "date '+%Y'")
+(defpoll CAL_DATE :interval "24h" "date '+%A, %d %B'")
+(defpoll time :interval "60s" :initial "initial-value" :run-while time-visible `date +%H:%M' '%p`)
+

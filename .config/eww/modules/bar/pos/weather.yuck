@@ -1,7 +1,7 @@
 (defwindow weather_widget
             :monitor 0
             :geometry (geometry :x "-65px"
-                                :y "55px"
+                                :y "56"
                                 :width "125px"
                                 :height "175px"
                                 :anchor "center top")
@@ -13,7 +13,7 @@
 (defwindow weather_widget_two
              :monitor 0
              :geometry (geometry :x "60px"
-                                 :y "55px"
+                                 :y "56"
                                  :width "115px"
                                  :height "175px"
                                  :anchor "center top")
