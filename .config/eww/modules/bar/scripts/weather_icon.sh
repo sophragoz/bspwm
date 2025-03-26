@@ -5,6 +5,13 @@ CITY="Perm"
 UNITS="metric"
 SYMBOL="°"
 
+
+SUN=""   
+CLOUD="󰅟"  
+RAIN=""   
+SNOW=""   
+MIST=""   
+
 API="https://api.openweathermap.org/data/2.5"
 
 if [ -n "$CITY" ]; then
@@ -29,6 +36,17 @@ fi
 if [ -n "$weather" ]; then
     weather_temp=$(echo "$weather" | jq ".main.temp" | cut -d "." -f 1)
     weather_icon=$(echo "$weather" | jq -r ".weather[0].icon")
+    
+    # Map weather icons to nerd font icons based on OpenWeatherMap icon codes
+    case "$weather_icon" in
+        "01"*) ICON="$SUN" ;;    # Clear
+        "02"*|"03"*|"04"*) ICON="$CLOUD" ;;  # Clouds
+        "09"*|"10"*) ICON="$RAIN" ;;  # Rain
+        "11"*) ICON="$RAIN" ;;  # Thunderstorm (using rain icon)
+        "13"*) ICON="$SNOW" ;;  # Snow
+        "50"*) ICON="$MIST" ;;  # Mist/Fog
+        *) ICON="$CLOUD" ;;  # Default to cloud
+    esac
 
-    echo  "$weather_temp$SYMBOL"
+    echo "$ICON"
 fi

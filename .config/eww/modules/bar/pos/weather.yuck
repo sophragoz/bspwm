@@ -1,0 +1,86 @@
+(defwindow weather_widget
+            :monitor 0
+            :geometry (geometry :x "-65px"
+                                :y "55px"
+                                :width "125px"
+                                :height "175px"
+                                :anchor "center top")
+            :stacking "bg"
+            :windowtype "dock"
+            :wm-ignore false
+            (box (main_g)))
+
+(defwindow weather_widget_two
+             :monitor 0
+             :geometry (geometry :x "60px"
+                                 :y "55px"
+                                 :width "115px"
+                                 :height "175px"
+                                 :anchor "center top")
+             :stacking "bg"
+             :windowtype "dock"
+             :wm-ignore false
+             (box (mainn)))
+
+(defwidget main_g []
+  (box :orientation "v"  
+       :space-evenly "false"
+       :halign "center"
+       (box :orientation "h" 
+            :space-evenly "false" 
+            :halign "end" 
+            (mainw)) 
+            (close)))  
+
+(defwidget mainn []
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    :halign "center"
+    :spacing "0"
+    (seven_days)))
+
+(defwidget mainw []
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    :spacing "2"
+    :halign "center"
+    (icon_w) (weat)))
+
+(defwidget weat []
+  (box :orientation "v"
+       :halign "center"
+       :spacing "0"
+       (label :class "temperature" 
+              :text  WEATHER)
+       (label :class "wind" 
+              :text WEATHER_WIND)
+       (label :class "regioncity" 
+              :text WEATHER_CITY)))
+
+(defwidget icon_w []
+  (box :orientation "v"
+       :halign "center"
+       :spacing "0"
+       (label :class "cloud" 
+              :text WEATHER_ICON)))
+
+(defwidget close []
+  (box :orientation "h"
+       :halign "center"
+       (button :class "close" 
+               :onclick "~/.config/eww/modules/bar/scripts/weather_widget_close.sh" "")))
+
+(defwidget seven_days []
+  (box :orientation "v"
+       :space-evenly "false"
+       :spacing "0"
+       :halign "end"
+       (list_7days)))
+
+(defwidget list_7days []                                                                                
+  (box :orientation "v" 
+       :halign "end"
+       (label :class "weather_7days" 
+              :text WEATHER_7DAYS))) 

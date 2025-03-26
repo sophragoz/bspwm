@@ -1,0 +1,27 @@
+.weather_widget_two,
+.weather_widget {
+  background: $bg;
+  color: $fg;
+}
+
+.cloud {
+  font-size: 30px;
+  margin: 0.8em 0px 5px 0px;
+}
+
+.weather_7days {
+ margin: 1.7em 0em 0px 0px;
+}
+
+.close {
+  background: $fg;
+  color: $bg;
+  margin: 7px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.temperature,
+.wind,
+.regioncity {
+  margin: 2px 0px 0px 0px;
+}

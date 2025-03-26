@@ -2,7 +2,7 @@
   (box :orientation "h"
        :space-evenly "false"
        :spacing 8
-       (button :class "power" :onclick "~/.config/eww/modules/bar/scripts/power.sh" "󰤃")
+       (button :class "power" :onclick "~/.config/eww/modules/bar/scripts/power.sh" "⏻")
        (label :class "pipe" :text "|")
        (button :class "volm" :onclick "eww open volumec" VOL)
        (label :class "separator" :text "::")

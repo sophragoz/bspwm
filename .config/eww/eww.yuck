@@ -1,2 +1,6 @@
+;; Bar
+(include "modules/bar/bar.yuck")
 (include "modules/bar/defpoll.yuck")
-(include "modules/bar/bar.yuck") 
+
+;; Options
+(include "modules/options/options.yuck")

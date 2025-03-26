@@ -3,7 +3,6 @@
        :halign "center"
        :space-evenly "false"
        :spacing 8
-       (label :class "time" :text TIME)
+       (button :class "time" :onclick "dunstify 'it is test'" TIME)
        (label :class "separator" :text "::")
-       (label :class "weather" :text WEATHER)
-       ))
+       (button :class "weather" :onclick "~/.config/eww/modules/bar/scripts/weather_widget_open.sh" WEATHER)))

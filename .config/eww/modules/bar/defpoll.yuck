@@ -1,7 +1,15 @@
+;; Bar
 (defpoll workspaces :interval "0.01s" "modules/bar/scripts/workspace.sh")
 (defpoll TIME :interval "1s" "modules/bar/scripts/time.sh")
-(defpoll WEATHER :interval "500s" "modules/bar/scripts/weather.sh")
 (defpoll VOL :interval "0.001s" "modules/bar/scripts/volume.sh")
 (defpoll volume :interval "0.001s" "modules/bar/scripts/volume.sh")
 (defpoll LAYOUT :interval "0.01s" "modules/bar/scripts/layout.sh")
+
+
+;; Weather widget
+(defpoll WEATHER :interval "500s" "modules/bar/scripts/weather.sh")
+(defpoll WEATHER_7DAYS :interval "600s" "modules/bar/scripts/weather_7days.sh")
+(defpoll WEATHER_ICON :interval "600s" "modules/bar/scripts/weather_icon.sh")
+(defpoll WEATHER_WIND :interval "600s" "modules/bar/scripts/weather_wind.sh")
+(defpoll WEATHER_CITY :interval "600s" "modules/bar/scripts/weather_contrycity.sh")
 

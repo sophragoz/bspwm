@@ -3,11 +3,20 @@
   color: $bg;
   min-width: 1.2em;
   padding: 0px 4px 0px 4px;
-  margin: 7px 0px 7px 12px;
+  margin: 9px 0px 9px 12px;
 }
 
 .volm {
   background: $bg;
+  color: $fg;
   padding: 0px 5px 0px 3px;
-  margin: 6px 0px 6px 0px;
+  margin: 1px 0px 1px 0px;
 }
+
+.pipe,
+.separator,
+.layout {
+  background: $bg;
+  color: $fg;
+}
+

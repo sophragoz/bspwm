@@ -2,6 +2,7 @@
 (include "modules/bar/pos/center.yuck")
 (include "modules/bar/pos/right.yuck")
 (include "modules/bar/pos/volume.yuck")
+(include "modules/bar/pos/weather.yuck")
 
 (defwindow bar
             :monitor 0

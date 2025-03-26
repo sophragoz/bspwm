@@ -1,0 +1,32 @@
+.bar {
+  background: $fg;
+}
+
+.power {
+  background: $bg;
+  color: $fg;
+}
+
+.workspaces,
+.weather,
+.separator,
+.pipe,
+.sep,
+.layout {
+  background: $fg;
+  color: $bg;
+}
+
+.w-actv {
+  background: $bg1;
+  color: $fg;
+}
+
+.volm {
+  background: $fg;
+  color: $bg
+}
+
+.w {
+  background: $bg;
+}

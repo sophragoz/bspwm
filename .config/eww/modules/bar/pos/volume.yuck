@@ -9,4 +9,4 @@
 (defwidget volume_scale []
   (overlay :hexpand true 
     (scale :min 0 :max 101 :active {volume != "muted"} :value {VOL == "muted" ? 0 : VOL} :onchange "pamixer --set-volume {}" :class "volume-scale no-slider")
-    (button :class "close-button" :onclick "eww close volumec" " ")))
+    (button :class "close-button" :onclick "eww close volumec" "")))

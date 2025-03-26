@@ -8,7 +8,9 @@
  ![one](https://github.com/sophragoz/bspwm/blob/main/screens/one.png)
  ![two](https://github.com/sophragoz/bspwm/blob/main/screens/two.png)
  ![three](https://github.com/sophragoz/bspwm/blob/main/screens/three.png)
- 
+
+ ### OLD SCREENS, added new features.
+
 </details>
 
 ### Themes for:
