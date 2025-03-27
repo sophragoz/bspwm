@@ -53,7 +53,7 @@
   (box :orientation "h"
        (button :class "search-w" 
                :onclick "~/.config/eww/modules/bar/scripts/rofi-search.sh" 
-               ":: Search...")))
+               ":: Click to search...")))
 
 (defwidget power-w []
   (box :orientation "h"
