@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sxhkd &
-conky -q &
+#conky -q &  # Disabled because using new widget with same options
 nitrogen --restore &
 #polybar -c ~/.config/polybar/config.ini & 
 xsetroot -cursor_name left_ptr &

@@ -1,3 +1,4 @@
+/* Is power menu disabled, in the future will be deleted... */
 @import "widget.rasi"
 
 window {

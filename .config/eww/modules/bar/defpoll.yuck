@@ -19,3 +19,5 @@
 (defpoll CAL_DATE :interval "24h" "date '+%A, %d %B'")
 (defpoll time :interval "60s" :initial "initial-value" :run-while time-visible `date +%H:%M' '%p`)
 
+;; Menu widget
+(defpoll INFORMAT :interval "10s" "modules/bar/scripts/menu.sh" )
