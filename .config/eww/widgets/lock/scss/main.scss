@@ -1,0 +1,11 @@
+.lock-menu {
+  background: $bg;
+}
+
+.lock-blur {
+  background-color: transparent;
+  opacity: 1;
+}
+
+@import 'avatar.scss';
+@import 'text.scss';

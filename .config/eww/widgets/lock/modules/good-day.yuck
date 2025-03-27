@@ -1,0 +1,17 @@
+(defwidget avatar-lock []
+  (box :orientation "h"
+       :space-evenly "false"
+       (box :class "avatar-lock-class"
+            :style "background-image: url('${AVATAR}');")))
+
+(defwidget good-day-lock []
+  (box :orientation "v"
+       :space-evenly "false"
+       (label :class "good-day-class"
+              :text GOOD)
+       (label :class "date-class"
+              :text DATE)
+       (label :class "date-time-class"
+              :text DATE_TIME)
+       (label :class "lock-icon-class" 
+              :text "")))

@@ -8,4 +8,7 @@
                "󰑓")
        (button :class "exit-w"
                :onclick "bspc quit"
-               "󰈆")))
+               "󰈆")
+       (button :class "lock-w"
+               :onclick "eww close menu & ~/.config/eww/widgets/lock/scripts/start.sh"
+               "")))             

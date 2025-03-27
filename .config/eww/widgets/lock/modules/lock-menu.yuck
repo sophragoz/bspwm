@@ -1,0 +1,11 @@
+(defwindow lock-menu 
+              :monitor 0
+              :geometry (geometry :y "390px"
+                                  :width "500px"
+                                  :height "300px"
+                                  :anchor "top center")
+              :stacking "fg"
+              :windowtype "dock"
+              :wm-ignore "true"
+              (box (avatar-lock)
+                   (good-day-lock)))

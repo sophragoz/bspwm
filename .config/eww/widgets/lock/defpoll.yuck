@@ -1,0 +1,3 @@
+(defpoll DATE :interval "24h" "date '+%Y-%M-%d'")
+(defpoll DATE_TIME :interval "1m" "date '+%H:%m'")
+(defvar BLUR "widgets/lock/blur.png")

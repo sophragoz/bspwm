@@ -17,3 +17,6 @@
 ;; Volume menu
 (include "widgets/volume/volume.yuck")
 
+;; Lock menu
+(include "widgets/lock/lock.yuck")
+(include "widgets/lock/defpoll.yuck")

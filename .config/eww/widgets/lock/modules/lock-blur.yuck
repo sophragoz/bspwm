@@ -1,0 +1,8 @@
+(defwindow lock-blur
+              :monitor 0
+              :geometry (geometry :width "1920px"
+                                  :height "1080px")
+     :stacking "bg"
+     :wm-ignore "true"
+     :windowtype "dock"
+     (box (blur)))

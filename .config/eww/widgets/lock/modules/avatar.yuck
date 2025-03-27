@@ -1,0 +1,11 @@
+(defwidget main-lock-menu [] 
+  (box :orientation "v"
+       :space-evenly "false"
+       :halign "center"
+       (avatar-lock)))
+
+(defwidget avatar-lock []
+  (box :orientation "h"
+       :space-evenly "false"
+       (box :class "avatar-lock-class"
+            :style "background-image: url('${AVATAR}');")))

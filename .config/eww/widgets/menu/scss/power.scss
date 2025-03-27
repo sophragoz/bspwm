@@ -1,20 +1,27 @@
 .power-off-w {
   background-color: $fg;
   color: $bg;
-  margin: 0px 0px 10px 70px;
+  margin: 0px 6px 10px 12px;
   border-radius: 6px;
 }
 
 .reboot-w {
   background-color: $fg;
   color: $bg;
-  margin: 0px 35px 10px 35px;
+  margin: 0px 6px 10px 6px;
   border-radius: 6px;
 }
 
 .exit-w {
   background-color: $fg;
   color: $bg;
-  margin: 0px 70px 10px 0px;
+  margin: 0px 6px 10px 6px;
+  border-radius: 6px;
+}
+
+.lock-w {
+  background-color: $fg;
+  color: $bg;
+  margin: 0px 12px 10px 6px;
   border-radius: 6px;
 }
