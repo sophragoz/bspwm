@@ -1,0 +1,10 @@
+(defwidget weat []
+  (box :orientation "v"
+       :halign "center"
+       :spacing "0"
+       (label :class "temperature" 
+              :text  WEATHER)
+       (label :class "wind" 
+              :text WEATHER_WIND)
+       (label :class "regioncity" 
+              :text WEATHER_CITY)))

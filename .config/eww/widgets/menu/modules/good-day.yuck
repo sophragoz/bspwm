@@ -1,0 +1,5 @@
+(defwidget good-day-bw []
+  (box :orientation "v"
+       :halign "center"
+       (label :class "good-day-w" 
+              :text GOOD)))

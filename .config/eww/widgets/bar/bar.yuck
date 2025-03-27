@@ -1,0 +1,20 @@
+(include "widgets/bar/pos/left.yuck")
+(include "widgets/bar/pos/center.yuck")
+(include "widgets/bar/pos/right.yuck")
+
+(defwindow bar
+            :monitor 0
+            :geometry (geometry :x "0%"
+                                :y "8px"
+                                :width "1898px"
+                                :height "37"
+                                :anchor "center top")
+            :stacking "fg"
+            :exclusive true
+            :windowtype "dock"
+            :wm-ignore false
+            (box 
+              (left) 
+              (center) 
+              (right)))
+

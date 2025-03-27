@@ -1,0 +1,4 @@
+(defvar AVATAR "widgets/menu/avatar.png")
+
+(defpoll GOOD :interval "99s" "widgets/bar/scripts/good.sh")
+(defpoll INFORMAT :interval "10s" "widgets/menu/scripts/menu.sh")

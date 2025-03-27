@@ -1,0 +1,5 @@
+(defpoll WEATHER :interval "500s" "widgets/weather/scripts/weather.sh")
+(defpoll WEATHER_7DAYS :interval "600s" "widgets/weather/scripts/weather_7days.sh")
+(defpoll WEATHER_ICON :interval "600s" "widgets/weather/scripts/weather_icon.sh")
+(defpoll WEATHER_WIND :interval "600s" "widgets/weather/scripts/weather_wind.sh")
+(defpoll WEATHER_CITY :interval "600s" "widgets/weather/scripts/weather_contrycity.sh")

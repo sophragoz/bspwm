@@ -1,0 +1,10 @@
+(include "widgets/calendar/modules/elements.yuck")
+(include "widgets/calendar/modules/full-calendar.yuck")
+
+(defwindow mycal
+    :stacking "fg"
+    :geometry (geometry :x "40%" 
+			:y "56" 
+			:width "350px" 
+			:height "30px")
+    (fullcal))

@@ -1,0 +1,17 @@
+(defwidget main_g []
+  (box :orientation "v"  
+       :space-evenly "false"
+       :halign "center"
+       (box :orientation "h" 
+            :space-evenly "false" 
+            :halign "end" 
+            (mainw)) 
+            (close)))  
+
+(defwidget mainw []
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    :spacing "2"
+    :halign "center"
+    (icon_w) (weat)))

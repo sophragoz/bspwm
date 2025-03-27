@@ -1,6 +1,19 @@
 ;; Bar
-(include "modules/bar/bar.yuck")
-(include "modules/bar/defpoll.yuck")
+(include "widgets/bar/bar.yuck")
+(include "widgets/bar/defpoll.yuck")
 
-;; Options
-(include "modules/options/options.yuck")
+;; Menu
+(include "widgets/menu/menu.yuck")
+(include "widgets/menu/defpoll.yuck")
+
+;; Calendar
+(include "widgets/calendar/calendar.yuck")
+(include "widgets/calendar/defpoll.yuck")
+
+;; Weather
+(include "widgets/weather/weather.yuck")
+(include "widgets/weather/defpoll.yuck")
+
+;; Volume menu
+(include "widgets/volume/volume.yuck")
+

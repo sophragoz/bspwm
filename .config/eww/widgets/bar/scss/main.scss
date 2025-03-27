@@ -1,0 +1,17 @@
+.bar {
+  background: $bg;
+}
+
+@import 'left.scss';
+@import 'center.scss';
+@import 'right.scss';
+
+/*
+Other themes, 
+uncomment one file to 
+change bar(didnt other widgets)
+*/
+
+/*@import 'themes/air.scss';*/
+/*@import 'themes/air-white.scss';*/
+/*@import 'themes/white.scss';*/

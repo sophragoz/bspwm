@@ -1,0 +1,13 @@
+(include "widgets/volume/modules/volume-scale.yuck")
+
+(defwindow volumec
+              :monitor 0
+              :geometry (geometry :x "-824" 
+                                  :y "56" 
+                                  :width "250px" 
+                                  :height "20px" 
+                                  :anchor "top center")
+              :hexpand false
+              :vexpand false
+              :class "volumec"
+              (volume_scale))

@@ -1,0 +1,7 @@
+(defwidget mainn []
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    :halign "center"
+    :spacing "0"
+    (seven_days)))

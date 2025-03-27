@@ -1,0 +1,5 @@
+(defwidget close []
+  (box :orientation "h"
+       :halign "center"
+       (button :class "close" 
+               :onclick "~/.config/eww/widgets/weather/scripts/weather_widget_close.sh" "")))

@@ -1,0 +1,6 @@
+(defwidget icon_w []
+  (box :orientation "v"
+       :halign "center"
+       :spacing "0"
+       (label :class "cloud" 
+              :text WEATHER_ICON)))

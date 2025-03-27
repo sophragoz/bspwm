@@ -1,0 +1,5 @@
+(defpoll workspaces :interval "0.01s" "widgets/bar/scripts/workspace.sh")
+(defpoll TIME :interval "1s" "widgets/bar/scripts/time.sh")
+(defpoll VOL :interval "0.001s" "widgets/bar/scripts/volume.sh")
+(defpoll volume :interval "0.001s" "widgets/bar/scripts/volume.sh")
+(defpoll LAYOUT :interval "0.01s" "widgets/bar/scripts/layout.sh")

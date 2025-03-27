@@ -1,0 +1,11 @@
+(defwindow weather_widget_two
+             :monitor 0
+             :geometry (geometry :x "60px"
+                                 :y "56"
+                                 :width "115px"
+                                 :height "175px"
+                                 :anchor "center top")
+             :stacking "bg"
+             :windowtype "dock"
+             :wm-ignore false
+             (box (mainn)))

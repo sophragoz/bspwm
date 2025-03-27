@@ -1,0 +1,9 @@
+(defwidget main-bw []
+  (box :orientation "v"
+       :space-evenly "false"
+    (close-bw)
+    (avatar-bw)
+    (good-day-bw)
+    (informat-bw)
+    (search-bw)
+    (power-w)))

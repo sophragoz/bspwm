@@ -1,0 +1,12 @@
+(defwidget seven_days []
+  (box :orientation "v"
+       :space-evenly "false"
+       :spacing "0"
+       :halign "end"
+       (list_7days)))
+
+(defwidget list_7days [] 
+  (box :orientation "v" 
+       :halign "end"
+       (label :class "weather_7days" 
+              :text WEATHER_7DAYS))) 

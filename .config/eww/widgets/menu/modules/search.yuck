@@ -1,0 +1,5 @@
+(defwidget search-bw []
+  (box :orientation "h"
+       (button :class "search-w" 
+               :onclick "~/.config/eww/widgets/bar/scripts/rofi-search.sh" 
+               ":: Click to Search...")))

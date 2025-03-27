@@ -1,0 +1,11 @@
+;; One module
+(include "widgets/weather/modules/widget-one.yuck")
+(include "widgets/weather/modules/main-one.yuck")
+(include "widgets/weather/modules/infos.yuck")
+(include "widgets/weather/modules/icon.yuck")
+(include "widgets/weather/modules/close.yuck")
+
+;; Two module
+(include "widgets/weather/modules/widget-two.yuck")
+(include "widgets/weather/modules/main-two.yuck")
+(include "widgets/weather/modules/seven-days.yuck")

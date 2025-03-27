@@ -1,0 +1,11 @@
+(defwidget power-w []
+  (box :orientation "h"
+       (button :class "power-off-w"
+               :onclick "/usr/sbin/poweroff"
+               "")
+       (button :class "reboot-w"
+               :onclick "/usr/sbin/reboot"
+               "󰑓")
+       (button :class "exit-w"
+               :onclick "bspc quit"
+               "󰈆")))

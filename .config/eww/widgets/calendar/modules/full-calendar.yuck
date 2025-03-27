@@ -1,0 +1,6 @@
+(defwidget fullcal[]
+  (box :orientation "v" :space-evenly "false" :class "cal-outer-container"
+  (box :class "cal-header")
+  (box :class "cal-date" "${CAL_DATE}"
+    (button :class "close-button" :onclick "eww close mycal" ""))
+    (cal)))

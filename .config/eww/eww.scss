@@ -7,5 +7,17 @@ $fg: #ebdbb2;
   font-weight: Bold;
 }
 
-/* bar and widgets for bar */
-@import 'modules/bar/scss/main.scss';
+/* Bar */
+@import 'widgets/bar/scss/main.scss';
+
+/* Menu */
+@import 'widgets/menu/scss/main.scss';
+
+/* Calendar */
+@import 'widgets/calendar/scss/main.scss';
+
+/* Weather */
+@import 'widgets/weather/scss/main.scss';
+
+/* Volume menu */
+@import 'widgets/volume/scss/main.scss';

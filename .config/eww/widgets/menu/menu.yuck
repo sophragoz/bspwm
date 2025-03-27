@@ -1,0 +1,18 @@
+(include "widgets/menu/modules/main.yuck")
+(include "widgets/menu/modules/close.yuck")
+(include "widgets/menu/modules/avatar.yuck")
+(include "widgets/menu/modules/good-day.yuck")
+(include "widgets/menu/modules/informat.yuck")
+(include "widgets/menu/modules/search.yuck")
+(include "widgets/menu/modules/power.yuck")
+
+(defwindow menu
+            :monitor 0
+            :geometry (geometry :x "-790px"
+                                :y "56"
+                                :width "280px"
+                                :height "300px"
+                                :anchor "center top")
+            :windowtype "dock"
+            (box 
+              (main-bw)))

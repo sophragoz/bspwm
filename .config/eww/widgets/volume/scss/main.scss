@@ -1,0 +1,8 @@
+.volm {
+  background: $bg;
+  padding: 0px 5px 0px 3px;
+  margin: 6px 0px 6px 0px;
+}
+
+@import 'volume-scale.scss';
+@import 'close-button-volume.scss'

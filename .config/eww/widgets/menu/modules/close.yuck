@@ -1,0 +1,9 @@
+(defwidget close-bw []
+  (box :orientation "h"
+       (label 
+         :class "text-w" 
+         :text "Menu")
+       (button 
+         :class "close-w" 
+         :onclick "eww close menu" 
+         "")))

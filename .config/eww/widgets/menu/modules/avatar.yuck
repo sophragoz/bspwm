@@ -1,0 +1,6 @@
+(defwidget avatar-bw []
+  (box :orientation "h"
+       (box :style "background-image: url('${AVATAR}');" 
+            :class "avatar-w"
+            :halign "center"
+            )))

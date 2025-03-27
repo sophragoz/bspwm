@@ -1,0 +1,8 @@
+.cal-inner-elems,
+.mycal {
+  background: $bg;
+  border-width: 0px;
+}
+
+@import 'top.scss';
+@import 'bottom.scss';

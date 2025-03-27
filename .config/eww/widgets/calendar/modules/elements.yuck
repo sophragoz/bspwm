@@ -1,0 +1,6 @@
+(defwidget cal []
+	(box :class "cal-container" 
+	(box :class "cal-inner"
+	(calendar :class "cal-inner-elems" 
+			  :day CAL_DAY
+			  :year CAL_YEAR))))
