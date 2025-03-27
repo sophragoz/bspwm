@@ -1,6 +1,6 @@
-(include "widgets/bar/pos/left.yuck")
-(include "widgets/bar/pos/center.yuck")
-(include "widgets/bar/pos/right.yuck")
+(include "widgets/bar/modules/left.yuck")
+(include "widgets/bar/modules/center.yuck")
+(include "widgets/bar/modules/right.yuck")
 
 (defwindow bar
             :monitor 0
