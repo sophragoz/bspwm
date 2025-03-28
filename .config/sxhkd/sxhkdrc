@@ -14,7 +14,7 @@ super + ctrl + p
   /usr/sbin/poweroff
 
 super + alt + c
-  exec ~/.config/rofi/scripts/scrsht.sh
+  eww open screenshot
 
 super + {t,shift + t,s,f}
   bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
@@ -31,3 +31,5 @@ super + {_,shift + }{1-6}
 super + {_,shift + }c
   bspc node -{c}
 
+alt + l
+  ~/.config/eww/widgets/lock/scripts/start.sh

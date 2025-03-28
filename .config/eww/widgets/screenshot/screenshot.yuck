@@ -1,0 +1,14 @@
+(include "widgets/screenshot/modules/main.yuck")
+(include "widgets/screenshot/modules/text.yuck")
+(include "widgets/screenshot/modules/buttons.yuck")
+
+(defwindow screenshot
+              :monitor 0
+              :geometry (geometry :y "-20px"
+                                  :width "270px"
+                                  :height "80px"
+                                  :anchor "bottom center")
+              :windowtype "dock"
+              :ignore-wm "false"
+              (box (main-screenshot)))
+

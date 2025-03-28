@@ -1,0 +1,19 @@
+(defwidget buttons []
+  (box :orientation "h"
+       :space-evenly "false"
+       :halign "center"
+       (button :class "screen-custom"
+               :onclick "eww close screenshot & flameshot gui"
+               "")
+       (button :class "screen-full"
+               :onclick "eww close screenshot & flameshot full"
+               "󰊔")
+       (button :class "screen-single"
+               :onclick "eww close screenshot & flameshot screen"
+               "󰹑")
+       (button :class "screen-settings"
+               :onclick "eww close screenshot & flameshot config"
+               "")
+       (button :class "screen-close"
+               :onclick "eww close screenshot"
+               "")))

@@ -1,0 +1,1 @@
+(defpoll TEXTSCR :interval "10m" "~/.config/eww/widgets/screenshot/scripts/text.sh")

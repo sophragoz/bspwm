@@ -1,0 +1,4 @@
+(defwidget main-screenshot []
+  (box :orientation "v"
+      (text)
+      (buttons)))

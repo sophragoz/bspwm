@@ -1,0 +1,5 @@
+(defwidget text []
+  (box :orientation "v"
+       :space-evenly "false"
+       (label :class "text-screen" 
+              :text TEXTSCR)))

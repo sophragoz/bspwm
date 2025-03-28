@@ -20,3 +20,7 @@
 ;; Lock menu
 (include "widgets/lock/lock.yuck")
 (include "widgets/lock/defpoll.yuck")
+
+;; Screenshot menu
+(include "widgets/screenshot/screenshot.yuck")
+(include "widgets/screenshot/defpoll.yuck")
